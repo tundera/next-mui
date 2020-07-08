@@ -1,12 +1,12 @@
 {
-  "build": {
-    "env": {
-      "AUTH0_DOMAIN": "YOUR_AUTH0_DOMAIN",
-      "AUTH0_CLIENT_ID": "YOUR_AUTH0_CLIENT_ID",
-      "AUTH0_CLIENT_SECRET": "@auth0_client_secret",
-      "REDIRECT_URI": "https://material.tundera.dev/api/callback",
-      "POST_LOGOUT_REDIRECT_URI": "https://material.tundera.dev/",
-      "SESSION_COOKIE_SECRET": "@session_cookie_secret"
+    "build": {
+        "env": {
+            "AUTH0_DOMAIN": "stackshuffle.auth0.com",
+            "AUTH0_CLIENT_ID": "JmgjXrFxSqrCKq5mJr45naBSn75PbcwK",
+            "AUTH0_CLIENT_SECRET": "@auth0_client_secret",
+            "REDIRECT_URI": "https://material.tundera.dev/api/callback",
+            "POST_LOGOUT_REDIRECT_URI": "https://material.tundera.dev/",
+            "SESSION_COOKIE_SECRET": "@session_cookie_secret"
+        }
     }
-  }
 }
