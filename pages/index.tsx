@@ -17,8 +17,8 @@ const Home = () => {
                 {hello}
                 <div
                     style={{
-                        flex: 'auto',
-                        justifyContent: 'center',
+                        flex: '0 1 auto',
+                        alignItems: 'center',
                         flexDirection: 'column',
                     }}
                 >

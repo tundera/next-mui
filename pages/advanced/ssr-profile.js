@@ -1,6 +1,6 @@
 // This import is only included in the server build, because it's only used by getServerSideProps
 import auth0 from '../../lib/auth0';
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 
 function Profile({ user }) {
     return (
