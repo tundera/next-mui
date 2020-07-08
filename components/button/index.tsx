@@ -15,4 +15,4 @@ const Button: FunctionComponent<Props> = ({ color, name }) => {
         </>
     );
 };
-export { Button };
+export default Button;

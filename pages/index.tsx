@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useTheme } from '@material-ui/core/styles';
-import { Button } from '../components/Button';
+import Button from '../components/Button';
 import Layout from '../components/Layout';
 import { useFetchUser } from '../lib/user';
 

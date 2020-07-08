@@ -27,7 +27,7 @@ module.exports = {
     },
     plugins: ['react', '@typescript-eslint'],
     rules: {
-        'no-unused-vars',
+        'no-unused-vars': 'warn',
         'prettier/prettier': 'error',
         'jest/no-hooks': 'off',
         'jest/prefer-expect-assertions': 'off',
@@ -43,6 +43,7 @@ module.exports = {
         'jest/lowercase-name': 'off',
         '@typescript-eslint/camelcase': 'warn',
         '@typescript-eslint/no-empty-function': 'warn',
+        '@typescript-eslint/no-unused-vars': 'warn',
         camelcase: 'warn',
         'no-case-declarations': 'warn',
     },
