@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "test": "npx jest",
-        "lint": "eslint --fix ./pages/**/*.{js,tsx} ./components/**/*.tsx"
+        "lint": "eslint --fix ./pages/**/*.{js,tsx} ./components/**/*.tsx",
+        "cypress:open": "cypress open"
     },
     "dependencies": {
         "@auth0/nextjs-auth0": "^0.13.0",
