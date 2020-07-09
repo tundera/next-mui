@@ -3,8 +3,8 @@ import Header from './Header';
 import { NextPage } from 'next';
 
 interface Props {
-    user: any;
-    loading: boolean;
+    user?: any;
+    loading?: boolean;
 }
 
 const Layout: NextPage<Props> = ({ user, loading = false, children }) => {

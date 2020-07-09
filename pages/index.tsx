@@ -4,8 +4,9 @@ import { useTheme } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Layout from '../components/Layout';
 import { useFetchUser } from '../lib/user';
+import { NextPage } from 'next';
 
-const Home = () => {
+const Home: NextPage = () => {
     const theme = useTheme();
     const hello = 'Hello';
 

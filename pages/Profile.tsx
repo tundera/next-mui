@@ -2,23 +2,10 @@
 // import auth0 from '../lib/auth0'
 import { useFetchUser } from '../lib/user';
 import Layout from '../components/Layout';
+import { NextPage } from 'next';
+import ProfileCard from '../components/ProfileCard';
 
-function ProfileCard({ user }) {
-    return (
-        <>
-            <h1>Profile</h1>
-
-            <div>
-                <h3>Profile (client rendered)</h3>
-                <img src={user.picture} alt="user picture" />
-                <p>nickname: {user.nickname}</p>
-                <p>name: {user.name}</p>
-            </div>
-        </>
-    );
-}
-
-function Profile() {
+const Profile: NextPage = () => {
     const { user, loading } = useFetchUser({ required: true });
 
     return (
@@ -26,6 +13,6 @@ function Profile() {
             {loading ? <>Loading...</> : <ProfileCard user={user} />}
         </Layout>
     );
-}
+};
 
 export default Profile;
