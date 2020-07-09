@@ -1,8 +1,15 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const dotenv = require('dotenv');
 dotenv.config();
 
-module.exports = {
+const withMDX = require('@next/mdx')();
+
+// This would let mdx be treated as pages by next
+// const withMDX = require('@next/mdx')({
+//     extension: /\.mdx?$/,
+// });
+
+module.exports = withMDX({
     env: {
         AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
         AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
@@ -16,4 +23,5 @@ module.exports = {
         SESSION_COOKIE_LIFETIME: 7200, // 2 hours
     },
     poweredByHeader: false,
-};
+    pageExtensions: ['js', 'mdx'],
+});
