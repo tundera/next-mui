@@ -4,7 +4,7 @@ import { NextPage } from 'next';
 
 import Layout from '../components/Layout';
 
-const Profile: NextPage = () => {
+const About: NextPage = () => {
     return (
         <Layout>
             <div>About Page</div>
@@ -12,4 +12,4 @@ const Profile: NextPage = () => {
     );
 };
 
-export default Profile;
+export default About;
