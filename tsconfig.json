@@ -24,6 +24,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "lib/user.js",
+    "lib/config.js",
+    "lib/auth0.js"
   ]
 }

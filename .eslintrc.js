@@ -3,6 +3,7 @@ module.exports = {
         browser: true,
         es6: true,
         node: true,
+        'cypress/globals': true,
     },
     extends: [
         'plugin:react/recommended',
@@ -12,6 +13,8 @@ module.exports = {
         'plugin:jest/all',
         'standard',
         'prettier',
+        'plugin:cypress/recommended',
+        'plugin:chai-friendly/recommended',
     ],
     globals: {
         Atomics: 'readonly',
@@ -25,7 +28,7 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint'],
+    plugins: ['cypress', 'react', '@typescript-eslint', 'chai-friendly'],
     rules: {
         'no-unused-vars': 'warn',
         'prettier/prettier': 'error',
@@ -41,10 +44,24 @@ module.exports = {
             },
         ],
         'jest/lowercase-name': 'off',
-        '@typescript-eslint/camelcase': 'warn',
+        // v3 of eslint tooling support issue
+        '@typescript-eslint/camelcase': 'off', // 'warn' in v3 of tooling
         '@typescript-eslint/no-empty-function': 'warn',
         '@typescript-eslint/no-unused-vars': 'warn',
-        camelcase: 'warn',
+        camelcase: 'off', // 'warn' in v3 of tooling
         'no-case-declarations': 'warn',
+        'cypress/no-assigning-return-values': 'error',
+        'cypress/no-unnecessary-waiting': 'error',
+        'cypress/assertion-before-screenshot': 'warn',
+        'cypress/no-force': 'warn',
+        'cypress/no-async-tests': 'error',
+        'no-unused-expressions': 0,
+        'chai-friendly/no-unused-expressions': 2,
+    },
+    settings: {
+        react: {
+            pragma: 'React',
+            version: 'detect',
+        },
     },
 };

@@ -23,5 +23,5 @@ module.exports = withMDX({
         SESSION_COOKIE_LIFETIME: 7200, // 2 hours
     },
     poweredByHeader: false,
-    pageExtensions: ['js', 'mdx'],
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 });
