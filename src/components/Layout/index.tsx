@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import Header from '../Header';
-import { NextPage } from 'next';
 
 interface Props {
     user?: any;
     loading?: boolean;
 }
 
-const Layout: NextPage<Props> = ({ user, loading = false, children }) => {
+const Layout: React.FC<Props> = ({ user, loading = false, children }) => {
     return (
         <>
             <Head>

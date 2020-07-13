@@ -1,6 +1,11 @@
-import auth0 from '../../../lib/auth0';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function callback(req, res) {
+import auth0 from '../../lib/auth0';
+
+export default async function callback(
+    req: NextApiRequest,
+    res: NextApiResponse
+) {
     try {
         await auth0.handleCallback(req, res, { redirectTo: '/' });
     } catch (error) {

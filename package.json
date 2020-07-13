@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "test": "npx jest",
-        "lint": "eslint --fix ./src/**/*.{js,tsx}",
+        "lint": "eslint --fix ./src/**/*.tsx",
         "cypress:open": "cypress open"
     },
     "dependencies": {
@@ -21,6 +21,7 @@
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "next": "^9.4.4",
+        "next-compose-plugins": "^2.2.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "theme-ui": "^0.3.1"

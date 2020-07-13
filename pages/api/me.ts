@@ -1,6 +1,8 @@
-import auth0 from '../../../lib/auth0';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function me(req, res) {
+import auth0 from '../../lib/auth0';
+
+export default async function me(req: NextApiRequest, res: NextApiResponse) {
     try {
         await auth0.handleProfile(req, res);
     } catch (error) {

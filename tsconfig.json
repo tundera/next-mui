@@ -28,6 +28,6 @@
     "lib/user.js",
     "lib/config.js",
     "lib/auth0.js",
-    "src/pages/api/cors.ts"
+    "pages/api/cors.ts"
   ]
 }

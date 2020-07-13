@@ -2,6 +2,7 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+const withPlugins = require('next-compose-plugins');
 const withMDX = require('@next/mdx')();
 
 // This would let mdx be treated as pages by next
@@ -9,7 +10,7 @@ const withMDX = require('@next/mdx')();
 //     extension: /\.mdx?$/,
 // });
 
-module.exports = withMDX({
+const nextConfig = {
     env: {
         AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
         AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
@@ -24,4 +25,6 @@ module.exports = withMDX({
     },
     poweredByHeader: false,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-});
+};
+
+module.exports = withPlugins([withMDX], nextConfig);

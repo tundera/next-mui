@@ -4,10 +4,10 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import { Box, Grid } from '@material-ui/core';
 
-import Button from '../components/Button';
-import Layout from '../components/Layout';
-import Link from '../components/Link';
-import { useFetchUser } from '../../lib/user';
+import Button from '../src/components/Button';
+import Layout from '../src/components/Layout';
+import Link from '../src/components/Link';
+import { useFetchUser } from '../lib/user';
 
 import { NextPage } from 'next';
 

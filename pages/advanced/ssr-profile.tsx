@@ -1,8 +1,15 @@
-// This import is only included in the server build, because it's only used by getServerSideProps
-import auth0 from '../../../lib/auth0';
-import Layout from '../../components/Layout';
+import { NextPage } from 'next';
 
-function Profile({ user }) {
+// This import is only included in the server build, because it's only used by getServerSideProps
+import auth0 from '../../lib/auth0';
+import Layout from '../../src/components/Layout';
+
+interface Context {
+    user?: any;
+    loading?: boolean;
+}
+
+const Profile: NextPage<Context> = ({ user }) => {
     return (
         <Layout user={user}>
             <h1>Profile</h1>
@@ -15,7 +22,7 @@ function Profile({ user }) {
             </div>
         </Layout>
     );
-}
+};
 
 export async function getServerSideProps({ req, res }) {
     // Here you can check authentication status directly before rendering the page,

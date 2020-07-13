@@ -1,5 +1,5 @@
 import Cors from 'cors';
-import initMiddleware from '../../../lib/init-middleware';
+import initMiddleware from '../../lib/init-middleware';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 // Initialize the cors middleware

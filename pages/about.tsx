@@ -3,11 +3,11 @@
 import { NextPage } from 'next';
 
 import { Typography, Container, Box } from '@material-ui/core';
-import Copyright from '../components/Copyright';
-import Link from '../components/Link';
-import ProTip from '../components/ProTip';
-import Layout from '../components/Layout';
-import { useFetchUser } from '../../lib/user';
+import Copyright from '../src/components/Copyright';
+import Link from '../src/components/Link';
+import ProTip from '../src/components/ProTip';
+import Layout from '../src/components/Layout';
+import { useFetchUser } from '../lib/user';
 
 const About: NextPage = () => {
     const { user, loading } = useFetchUser();
