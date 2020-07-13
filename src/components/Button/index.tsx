@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import { Button as MuiButton } from '@material-ui/core';
+import { Button as MuiButton, ButtonProps } from '@material-ui/core';
 
-interface Props {
+interface Props extends ButtonProps {
     color: 'primary' | 'secondary';
 }
 

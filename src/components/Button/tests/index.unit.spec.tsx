@@ -4,7 +4,7 @@ import faker from 'faker';
 import { render, cleanup } from '@testing-library/react';
 import Button from '../index';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { theme } from '../../../theme';
+import theme from '../../../theme';
 import { Button as MuiButton } from '@material-ui/core';
 
 const sandbox = sinon.createSandbox();

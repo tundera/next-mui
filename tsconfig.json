@@ -27,6 +27,7 @@
     "**/*.tsx",
     "lib/user.js",
     "lib/config.js",
-    "lib/auth0.js"
+    "lib/auth0.js",
+    "src/pages/api/cors.js"
   ]
 }
