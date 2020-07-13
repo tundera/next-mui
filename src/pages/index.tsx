@@ -3,11 +3,11 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import { Box, Grid } from '@material-ui/core';
-import Link from '../components/Link';
-import { useFetchUser } from '../../lib/user';
 
 import Button from '../components/Button';
 import Layout from '../components/Layout';
+import Link from '../components/Link';
+import { useFetchUser } from '../../lib/user';
 
 import { NextPage } from 'next';
 
@@ -38,20 +38,14 @@ const Home: NextPage = () => {
                             <Grid item>
                                 <Button color="primary">
                                     <Link href="/profile">
-                                        <a>
-                                            <Typography variant="button">
-                                                CSR profile
-                                            </Typography>
-                                        </a>
+                                        <a>Client-side</a>
                                     </Link>
                                 </Button>
                             </Grid>
                             <Grid item>
                                 <Button color="primary">
                                     <Link href="/advanced/ssr-profile">
-                                        <Typography variant="button">
-                                            <a>SSR Mode</a>
-                                        </Typography>
+                                        <a>Server-side</a>
                                     </Link>
                                 </Button>
                             </Grid>

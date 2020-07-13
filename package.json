@@ -18,6 +18,7 @@
         "@next/mdx": "^9.4.4",
         "@theme-ui/presets": "^0.3.0",
         "@theme-ui/style-guide": "^0.3.0",
+        "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "next": "^9.4.4",
         "react": "^16.13.1",
@@ -27,6 +28,7 @@
     "devDependencies": {
         "@testing-library/jest-dom": "^5.1.1",
         "@testing-library/react": "^10.4.5",
+        "@types/cors": "^2.8.6",
         "@types/jest": "^26.0.4",
         "@types/sinon": "^9.0.4",
         "@typescript-eslint/eslint-plugin": "^3.6.0",

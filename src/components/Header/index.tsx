@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { Grid } from '@material-ui/core';
+
 interface Props {
     user: any;
     loading: boolean;
@@ -9,42 +11,59 @@ const Header: React.FC<Props> = ({ user, loading }) => {
     return (
         <header>
             <nav>
-                <ul>
-                    <li>
-                        <Link href="/">
-                            <a>Home</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/about">
-                            <a>About</a>
-                        </Link>
-                    </li>
-                    {!loading &&
-                        (user ? (
-                            <>
+                <Grid container direction="column" justify="center">
+                    <ul>
+                        <Grid
+                            container
+                            item
+                            alignItems="center"
+                            justify="space-between"
+                        >
+                            <Grid item>
                                 <li>
-                                    <Link href="/profile">
-                                        <a>Client-rendered profile</a>
+                                    <Link href="/">
+                                        <a>Home</a>
                                     </Link>
                                 </li>
+                            </Grid>
+
+                            <Grid item>
                                 <li>
-                                    <Link href="/advanced/ssr-profile">
-                                        <a>
-                                            Server rendered profile (advanced)
-                                        </a>
+                                    <Link href="/about">
+                                        <a>About</a>
                                     </Link>
                                 </li>
-                                <li>
-                                    <a href="/api/logout">Logout</a>
-                                </li>
-                            </>
-                        ) : (
-                            <li>
-                                <a href="/api/login">Login</a>
-                            </li>
-                        ))}
-                </ul>
+                            </Grid>
+                            {!loading &&
+                                (user ? (
+                                    <>
+                                        <Grid container justify="flex-start">
+                                            <Grid item>
+                                                <li>
+                                                    <Link href="/profile">
+                                                        <a>Profile</a>
+                                                    </Link>
+                                                </li>
+                                            </Grid>
+                                            <Grid item>
+                                                <li>
+                                                    <a href="/api/logout">
+                                                        Logout
+                                                    </a>
+                                                </li>
+                                            </Grid>
+                                        </Grid>
+                                    </>
+                                ) : (
+                                    <Grid item>
+                                        <li>
+                                            <a href="/api/login">Login</a>
+                                        </li>
+                                    </Grid>
+                                ))}
+                        </Grid>
+                    </ul>
+                </Grid>
             </nav>
 
             <style jsx>{`
