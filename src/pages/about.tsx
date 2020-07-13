@@ -3,10 +3,12 @@
 import { NextPage } from 'next';
 
 import Layout from '../components/Layout';
+import { useFetchUser } from '../../lib/user';
 
 const About: NextPage = () => {
+    const { user, loading } = useFetchUser();
     return (
-        <Layout>
+        <Layout user={user} loading={loading}>
             <div>About Page</div>
         </Layout>
     );

@@ -1,31 +1,32 @@
 import React from 'react';
 
-import { useTheme } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import { Box } from '@material-ui/core';
+
 import Button from '../components/Button';
 import Layout from '../components/Layout';
 import { useFetchUser } from '../../lib/user';
 import { NextPage } from 'next';
 
 const Home: NextPage = () => {
-    const theme = useTheme();
-    const hello = 'Hello';
-
     const { user, loading } = useFetchUser();
 
     return (
         <Layout user={user} loading={loading}>
-            <div style={{ color: theme.palette.primary.main, display: 'flex' }}>
-                {hello}
-                <div
-                    style={{
-                        flex: '0 1 auto',
-                        alignItems: 'center',
-                        flexDirection: 'column',
-                    }}
-                >
-                    <Button name="Click Me" color="primary" />
-                </div>
-            </div>
+            <Container maxWidth="sm">
+                <Box my={4}>
+                    <Typography variant="h4" component="h1" gutterBottom>
+                        Next.js Starter with Material-UI
+                    </Typography>
+
+                    <Button color="primary">
+                        <Typography variant="button">
+                            <a href="https://google.com/">Click Me</a>
+                        </Typography>
+                    </Button>
+                </Box>
+            </Container>
         </Layout>
     );
 };

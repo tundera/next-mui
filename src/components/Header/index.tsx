@@ -1,6 +1,12 @@
+import { FC } from 'react';
 import Link from 'next/link';
 
-function Header({ user, loading }) {
+interface Props {
+    user: any;
+    loading: boolean;
+}
+
+const Header: React.FC<Props> = ({ user, loading }) => {
     return (
         <header>
             <nav>
@@ -78,6 +84,6 @@ function Header({ user, loading }) {
             `}</style>
         </header>
     );
-}
+};
 
 export default Header;
