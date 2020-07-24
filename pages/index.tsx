@@ -26,7 +26,7 @@ const Home: NextPage = () => {
                     >
                         <Grid item>
                             <Typography variant="h4" gutterBottom>
-                                Next.js Starter with Material-UI
+                                tundera (material)
                             </Typography>
                         </Grid>
                         <Grid item>
@@ -49,7 +49,6 @@ const Home: NextPage = () => {
                                     </Link>
                                 </Button>
                             </Grid>
-                            ;
                         </Grid>
                     </Grid>
                 </Box>
