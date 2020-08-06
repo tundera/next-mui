@@ -8,7 +8,9 @@
         "start": "next start",
         "test": "npx jest",
         "lint": "eslint --fix ./src/**/*.tsx",
-        "cypress:open": "cypress open"
+        "cypress:open": "cypress open",
+        "deploy": "vercel -b AUTH0_CLIENT_SECRET=@auth0_client_secret -b SESSION_COOKIE_SECRET=@session_cookie_secret",
+        "deploy:prod": "vercel -b AUTH0_CLIENT_SECRET=@auth0_client_secret -b SESSION_COOKIE_SECRET=@session_cookie_secret --prod"
     },
     "dependencies": {
         "@auth0/nextjs-auth0": "^0.15.0",
