@@ -11,14 +11,9 @@ const Header: React.FC<Props> = ({ user, loading }) => {
     return (
         <header>
             <nav>
-                <Grid container direction="column" justify="center">
+                <Grid container alignItems="center" justify="space-between">
                     <ul>
-                        <Grid
-                            container
-                            item
-                            alignItems="center"
-                            justify="space-between"
-                        >
+                        <Grid container item>
                             <Grid item>
                                 <li>
                                     <Link href="/">
@@ -26,7 +21,6 @@ const Header: React.FC<Props> = ({ user, loading }) => {
                                     </Link>
                                 </li>
                             </Grid>
-
                             <Grid item>
                                 <li>
                                     <Link href="/about">
@@ -34,34 +28,35 @@ const Header: React.FC<Props> = ({ user, loading }) => {
                                     </Link>
                                 </li>
                             </Grid>
-                            {!loading &&
-                                (user ? (
-                                    <>
-                                        <Grid container justify="flex-start">
-                                            <Grid item>
-                                                <li>
-                                                    <Link href="/profile">
-                                                        <a>Profile</a>
-                                                    </Link>
-                                                </li>
-                                            </Grid>
-                                            <Grid item>
-                                                <li>
-                                                    <a href="/api/logout">
-                                                        Logout
-                                                    </a>
-                                                </li>
-                                            </Grid>
-                                        </Grid>
-                                    </>
-                                ) : (
+                        </Grid>
+                    </ul>
+
+                    <ul>
+                        {!loading &&
+                            (user ? (
+                                <Grid container item justify="flex-end">
+                                    <Grid item>
+                                        <li>
+                                            <Link href="/profile">
+                                                <a>Profile</a>
+                                            </Link>
+                                        </li>
+                                    </Grid>
+                                    <Grid item>
+                                        <li>
+                                            <a href="/api/logout">Logout</a>
+                                        </li>
+                                    </Grid>
+                                </Grid>
+                            ) : (
+                                <Grid container item>
                                     <Grid item>
                                         <li>
                                             <a href="/api/login">Login</a>
                                         </li>
                                     </Grid>
-                                ))}
-                        </Grid>
+                                </Grid>
+                            ))}
                     </ul>
                 </Grid>
             </nav>
@@ -70,10 +65,10 @@ const Header: React.FC<Props> = ({ user, loading }) => {
                 header {
                     padding: 0.2rem;
                     color: #fff;
-                    background-color: #333;
+                    background-color: #000;
                 }
                 nav {
-                    max-width: 42rem;
+                    max-width: 84rem;
                     margin: 1.5rem auto;
                 }
                 ul {

@@ -24,30 +24,39 @@ const Home: NextPage = () => {
                         alignItems="center"
                         spacing={2}
                     >
-                        <Grid item>
-                            <Typography variant="h4" gutterBottom>
-                                tundera (material)
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography variant="h5" gutterBottom>
-                                View Profile
-                            </Typography>
-                        </Grid>
-                        <Grid container item justify="center" spacing={2}>
+                        <Grid
+                            container
+                            item
+                            alignItems="center"
+                            direction="column"
+                        >
                             <Grid item>
-                                <Button color="primary">
-                                    <Link href="/profile">
-                                        <a>Client-side</a>
-                                    </Link>
-                                </Button>
+                                <Typography variant="h4" gutterBottom>
+                                    Next.js with Material-UI and Auth0
+                                </Typography>
                             </Grid>
+                        </Grid>
+                        <Grid container item justify="center" spacing={1}>
                             <Grid item>
-                                <Button color="primary">
-                                    <Link href="/advanced/ssr-profile">
-                                        <a>Server-side</a>
-                                    </Link>
-                                </Button>
+                                <Typography variant="h6" gutterBottom>
+                                    View Profile
+                                </Typography>
+                            </Grid>
+                            <Grid item container justify="center" spacing={2}>
+                                <Grid item>
+                                    <Button color="primary">
+                                        <Link href="/profile">
+                                            <a>Client-side</a>
+                                        </Link>
+                                    </Button>
+                                </Grid>
+                                <Grid item>
+                                    <Button color="primary">
+                                        <Link href="/advanced/ssr-profile">
+                                            <a>Server-side</a>
+                                        </Link>
+                                    </Button>
+                                </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
